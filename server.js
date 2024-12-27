@@ -27,10 +27,10 @@ app.get("/", (req, res) => {
   res.send("express api is running on port " + port);
 });
 
-// Serve the website on all other paths, except the API paths
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "frontend", "index.html"));
-});
+// // Serve the website on all other paths, except the API paths
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "frontend", "index.html"));
+// });
 
 // Endpoint to handle image upload
 app.post("/upload", upload.single("image"), (req, res) => {
